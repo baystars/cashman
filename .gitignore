@@ -1,0 +1,25 @@
+# See http://help.github.com/ignore-files/ for more about ignoring files.
+
+# general
+.hg
+*.bak
+*~
+*.orig
+*.local
+.python-version
+__pycache__
+instance
+
+# IDE - VSCode
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+
+# misc
+.sass-cache
+
+# System Files
+.DS_Store
+Thumbs.db
