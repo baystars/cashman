@@ -22,13 +22,11 @@ def get_incomes():
     )
     return jsonify(incomes.data)
 
-
 @app.route('/incomes', methods=['POST'])
 def add_income():
     income = IncomeSchema().load(request.get_json())
     transactions.append(income.data)
     return "", 204
-
 
 @app.route('/expenses')
 def get_expenses():
@@ -43,7 +41,6 @@ def add_expense():
     expense = ExpenseSchema().load(request.get_json())
     transactions.append(expense.data)
     return "", 204
-
 
 if __name__ == "__main__":
     app.run()

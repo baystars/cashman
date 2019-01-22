@@ -11,7 +11,7 @@ class Transaction():
         self.tipe = tipe
 
     def __repr__(self):
-        return '<Transaction(name={self.description!r})>'.format(self=self)
+        return f'<Transaction(name={self.description!r})>'
 
 class TransactionSchema(Schema):
     description = fields.Str()
