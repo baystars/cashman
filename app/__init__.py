@@ -18,7 +18,7 @@ transactions = [
 def get_incomes():
     schema = IncomeSchema(many=True)
     incomes = schema.dump(
-        filter(lambda t: t.tipe == TransactionType.INCOME, transactions)
+        filter(lambda t: t.typ == TransactionType.INCOME, transactions)
     )
     return jsonify(incomes.data)
 
@@ -32,7 +32,7 @@ def add_income():
 def get_expenses():
     schema = ExpenseSchema(many=True)
     expenses = schema.dump(
-        filter(lambda t: t.tipe == TransactionType.EXPENSE, transactions)
+        filter(lambda t: t.typ == TransactionType.EXPENSE, transactions)
     )
     return jsonify(expenses.data)
 

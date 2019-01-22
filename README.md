@@ -1,6 +1,11 @@
 # Cashman - Flask Restful Application
 
-## General
+## Feature
+
+* use marshmallow
+* auth0 auth example
+
+## Reference
 
 * [Python と Flask で RESTful API を開発する](https://auth0.com/blog/jp-developing-restful-apis-with-python-and-flask/)
 * [Auth0 Python API SDK Quickstarts: Authorization](https://auth0.com/docs/quickstart/backend/python)
@@ -66,6 +71,30 @@ get expenses
 add a new expense
 
     $ curl -X POST -H "Content-Type: application/json" -d '{ "amount": 20, "description": "lottery ticket"}' http://localhost:5000/expenses
+
+check result
+
+    $ curl http://localhost:5000/expenses
+    [
+      {
+        "amount": -50.0, 
+        "created_at": "2019-01-22T15:11:19.879518", 
+        "description": "pizza", 
+        "tipe": "TransactionType.EXPENSE"
+      }, 
+      {
+        "amount": -100.0, 
+        "created_at": "2019-01-22T15:11:19.879528", 
+        "description": "Rock Concert", 
+        "tipe": "TransactionType.EXPENSE"
+      }, 
+      {
+        "amount": -20.0, 
+        "created_at": "2019-01-22T15:12:26.859991", 
+        "description": "lottery ticket", 
+        "tipe": "TransactionType.EXPENSE"
+      }
+    ]
 
 get incomes
 
