@@ -13,3 +13,12 @@ run:
 
 run-secure:
 	env FLASK_ENV=development FLASK_APP=app_secure.py flask run --host=0.0.0.0
+
+add:
+	git add .
+
+commit: add
+	git commit -m 'modify'
+
+push: commit
+	git push -u origin master
